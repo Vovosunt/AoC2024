@@ -36,3 +36,11 @@ where
     let elapsed = Instant::now() - start;
     return (result, elapsed.as_micros());
 }
+
+pub fn get_char_grid(input: &str) -> Vec<Vec<char>>{
+    let mut grid: Vec<Vec<char>> = Vec::new();
+    for line in input.lines(){
+        grid.push(line.chars().collect());
+    }
+    return grid;
+}
